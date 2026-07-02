@@ -1,38 +1,180 @@
-.App {
+@font-face {font-family: Mulish Bold; src: url(Fonts/Mulish-Bold.ttf)}
+@font-face {font-family: Mulish SemiBold; src: url(Fonts/Mulish-SemiBold.ttf)}
+@font-face {font-family: Elmond; src: url(Fonts/Elmond.ttf)}
+@font-face {font-family: Nexa Heavy; src: url(Fonts/Nexa-Heavy.ttf)}
+@font-face {font-family: Montserrat SemiBold; src: url(Fonts/Montserrat-SemiBold.ttf)}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: Montserrat SemiBold;
+  min-height: 100dvh; /* 🔥 dynamic viewport height */
+}
+.message {
+  width: 85%;
+  font-size: 30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message.title {
+  font-size: 100px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.message.instructions {
+  font-size: 20px;
+  text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.message.instructions.title {
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+}
+.message.clue-title {
+  /* font-size: 80px; */
+  top: 30px;
+}
+.message.answer {
+  position: absolute;
+  top: 80px;
+  font-size: 50px;
+}
+.message.finish {
+  font-size: 50px;
+  text-align: center;
+}
+.button {
+  margin-right: 8px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 13px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.button.back {
+  margin-right: 8px;
+  border: 2px solid #808080;
+  background-color: #808080;
+}
+.button.back.below {
+  margin-top: 15px;
+}
+.button.back.below.title {
+  margin-top: 30px;
+}
+.button.good {
+  border: 2px solid #3AAB59;
+  background-color: #3AAB59;
+}
+.button.bad {
+  border: 2px solid #EE3739;
+  background-color: #EE3739;
+}
+.button.next-clue {
+  border: 2px solid black;
+  background-color: black;
+}
+.button.last-clue {
+  border: 2px solid #808080;
+  background-color: #808080;
+}
+#spotify {
+  border: 2px solid #1DB954;
+  background-color: #1DB954;
+}
+#spotify, #start {
+  width: 80px;
+}
+.image-container {
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  /* border: 4px solid black; */
+  border-radius: 10px;
+  overflow: hidden;
+  /* background: white; */
+}
+.image-container img, .image-container-final img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.image-container-final {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  /* border: 4px solid black; */
+  border-radius: 10px;
+  overflow: hidden;
+  /* background: white; */
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* dark overlay */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.play-button {
+  font-size: 80px;
+  opacity: 80%;
   color: white;
 }
+.song.name {
+  font-size: 25px;
+  position: absolute;
+  top: 395px;
+  text-align: center;
+}
+.song.artist {
+  font-size: 15px;
+  position: absolute;
+  top: 430px;
+}
+.message.clue {
+  top: 475px;
+  position: absolute;
+  font-size: 20px;
+}
+.number-input, .word-input {
+  top: 540px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 10px;
+  background: transparent;
+  text-align: center;
+  color: white;
+  font-family: Montserrat SemiBold;
 
-.App-link {
-  color: #61dafb;
+  font-size: 30px;
+  padding: 4px;
+  outline: none;
+  width: 50px;
+}
+.word-input {
+  width: 250px;
+}
+.number-input.error, .word-input.error {
+  border: 3px solid #EE3739;
+}
+.number-input.correct, .word-input.correct {
+  border: 3px solid #3AAB59;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
