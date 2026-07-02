@@ -263,7 +263,6 @@ useEffect(() => {
         <div className="page">
           <div className="message">hi darahnea</div>
           <div className="button" role="button" onClick={() => {setPage("page2")}}>hello</div>
-          <div className="button" role="button" onClick={() => {setPage("page12")}}>Skip</div>
         </div>
       )}
       {page === "page2" && (
