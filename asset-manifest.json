@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/spotifygame/static/css/main.444b667f.css",
-    "main.js": "/spotifygame/static/js/main.b5aad22e.js",
+    "main.js": "/spotifygame/static/js/main.affb274c.js",
     "static/js/453.7ce6d0f9.chunk.js": "/spotifygame/static/js/453.7ce6d0f9.chunk.js",
     "static/media/taylorswiftcorneliastreet.mp3": "/spotifygame/static/media/taylorswiftcorneliastreet.1ce7b03dc922361416cc.mp3",
     "static/media/lanadelreyvideogames.mp3": "/spotifygame/static/media/lanadelreyvideogames.0b5c1fc48412d6fa4171.mp3",
@@ -36,11 +36,11 @@
     "static/media/logo.svg": "/spotifygame/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/spotifygame/index.html",
     "main.444b667f.css.map": "/spotifygame/static/css/main.444b667f.css.map",
-    "main.b5aad22e.js.map": "/spotifygame/static/js/main.b5aad22e.js.map",
+    "main.affb274c.js.map": "/spotifygame/static/js/main.affb274c.js.map",
     "453.7ce6d0f9.chunk.js.map": "/spotifygame/static/js/453.7ce6d0f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.444b667f.css",
-    "static/js/main.b5aad22e.js"
+    "static/js/main.affb274c.js"
   ]
 }
